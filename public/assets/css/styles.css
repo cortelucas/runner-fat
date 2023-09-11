@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F7F7F7;
+}
+
+.game {
+    border-bottom: 2px solid;
+    height: 300px;
+    width: 940px;
+    position: relative;
+    overflow: hidden;
+}
+
+.score {
+    font-family: 'Press Start 2P', cursive;
+    position: absolute;
+    text-align: center;
+    top: 30px;
+    left: 45%;
+    font-size: x-large;
+}
+
+.fat {
+    position: absolute;
+    bottom: 0;
+    background-image: url(../images/fat.gif);
+    width: 130px;
+    height: 130px;
+    background-size: 140px;
+    background-repeat: no-repeat;
+}
+
+.hamb {
+    position: absolute;
+    bottom: 0;
+    background-image: url(../images/hamb.gif);
+    width: 130px;
+    height: 115px;
+    background-size: 130px;
+    background-repeat: no-repeat;
+    animation: hamb 3s linear infinite;
+}
+
+@keyframes hamb {
+    0% {
+        right: -20px;
+    }
+    100% {
+        right: 900px;
+    }
+}
+
+.jump {
+    animation: jump 1.1s linear;
+}
+
+@keyframes jump {
+    0% {
+        bottom: 0;
+    }
+    30% {
+        bottom: 100px;
+    }
+    50% {
+        bottom: 120px;
+    }
+    80% {
+        bottom: 100px;
+    }
+    100% {
+        bottom: 0;
+    }
+}
